@@ -41,8 +41,7 @@ def webhook():
                     message_text = messaging_event["message"]["text"]  # the message's text
                     
                     
-                    sender_name=messaging_event["sender"]["name"]
-                    send_message(sender_id, ('你好，%s'%(sender_name)))
+                    send_message(sender_id, (@'你好，\n網頁版:http://fathouse.somee.com/NUTN_lazyP_OuOb/\n安卓APP:https://goo.gl/JrBhVi'))
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass

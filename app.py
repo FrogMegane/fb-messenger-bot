@@ -42,8 +42,7 @@ def webhook():
                     res=requests.get('https://graph.facebook.com/v2.6/me?fields=name&access_token=%s'%(os.environ["PAGE_ACCESS_TOKEN"]))
                     jsondata=json.loads(res.text)
                     sender_name=jsondata['name']
-                    send_message(sender_id, "我是%s，很高興為您服務!\r\n安卓版:\r\nhttps://goo.gl/JrBhVi\r\n網頁版:\r\nhttps://goo.gl/HzqJ3c"%(sender_name))
-                    #send_message(sender_id, "你好，\r\n安卓版:\r\nhttps://goo.gl/JrBhVi\r\n網頁版:\r\nhttps://goo.gl/HzqJ3c")
+                    send_message(sender_id, "我是%s，\r\n安卓版:\r\nhttps://goo.gl/JrBhVi\r\n網頁版:\r\nhttps://goo.gl/HzqJ3c"%(sender_name))
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass

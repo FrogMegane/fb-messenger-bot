@@ -39,7 +39,7 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
 
-                    send_message(sender_id, "此為自動回話，\r\n安卓版:https://goo.gl/JrBhVi\r\n網頁版:https://goo.gl/HzqJ3c")
+                    send_message(sender_id, "你好，\r\n安卓版:https://goo.gl/JrBhVi\r\n網頁版:https://goo.gl/HzqJ3c")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass

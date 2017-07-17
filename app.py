@@ -43,7 +43,6 @@ def webhook():
                     res=requests.get('https://graph.facebook.com/v2.6/me?fields=name&access_token=%s'%(os.environ["PAGE_ACCESS_TOKEN"]))
                     jsondata=json.loads(res.text)
                     sender_name=jsondata['name']
-                    log(sender_name)
                     sender_name=sender_name.encode('utf-8')
                     log(sender_name)
                     send_message(sender_id,sender_name)

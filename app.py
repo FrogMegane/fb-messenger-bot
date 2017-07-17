@@ -44,8 +44,7 @@ def webhook():
                     jsondata=json.loads(res.text)
                     sender_name=jsondata['name']
                     sender_name=sender_name.encode('utf-8')
-                    log(sender_name)
-                    send_message(sender_id,sender_name)
+                    send_message(sender_id,"我是%s!很高興為您服務~"%(sender_name))
                     send_message(sender_id, "目前提供:\r\n安卓版:\r\nhttps://goo.gl/JrBhVi\r\n網頁版:\r\nhttps://goo.gl/HzqJ3c")
 
                 if messaging_event.get("delivery"):  # delivery confirmation
